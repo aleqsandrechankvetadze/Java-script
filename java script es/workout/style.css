@@ -1,0 +1,83 @@
+body {
+    background-color: #292929;
+    background-repeat: no;
+    padding: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+#out-div {
+    padding: 50px;
+    background-color: #292929;
+}
+
+#inside-div {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    top: 80px;
+    background-color: cadetblue;
+    border-radius: 40px;
+    max-width: 250px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#money-input {
+    position: relative;
+    top: 120px;
+    height: 20px;
+}
+
+#deposit-btn {
+    position: relative;
+    top: 115px;
+    width: 75px;
+    right: 5px;
+    color: black;
+}
+#deposit-btn-hower {
+    background-color: cadetblue;
+    transition: 0.4s;
+}
+
+#withdraw-btn {
+    position: relative;
+    top: 115px;
+    width: 75px;
+}
+
+#balance {
+    position: relative;
+    top:65px
+}
+
+#userName {
+    position: relative;
+    bottom:70px
+}
+
+#user {
+    position: relative;
+    left:500px;
+    top:130px;
+}
+
+#btn1 {
+    position: relative;
+    left:325px;
+    top:155px;
+    width: 170px;
+}
+
+#btn1-hower {
+    background-color: #292929;
+    transition: 0.6s;
+}
+
+#output1 {
+    position: relative;
+    color:white;
+    left:545px;
+    top:160px;
+
+}

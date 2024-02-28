@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: black;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #0056B3;
+        }
+    #div{
+        position: relative;
+        top:200px
+    }
+
+    #h1{
+        color:green;
+    }
+    #p1{
+        color:green;
+    }
+
+    #p2{
+        color:green;
+    }    
+
+    #btn1{
+        color:white;
+        background-color: green;
+    }
+
+    #btn2{
+        color:white;
+        background-color: green;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="div">
+    <h1 id="h1">Dice Roll</h1>
+    <p id="p1">Player 1: <span id="player1Score">0</span></p>
+    <p id="p2">Player 2: <span id="player2Score">0</span></p>
+    <button id="btn1" class="btn" id="rollDice">Roll Dice</button>
+    <button id="btn2" class="btn" id="reset">Reset</button>
+    </div>
+
+    <script>
+        function rollDice() {
+            const rollResult = Math.floor(Math.random() * 6) + 1;
+            const player1ScoreElement = document.getElementById("player1Score");
+            const player2ScoreElement = document.getElementById("player2Score");
+            let player1Score = parseInt(player1ScoreElement.textContent);
+            let player2Score = parseInt(player2ScoreElement.textContent);
+
+            if (rollResult % 2 === 0) {
+                player1Score += rollResult;
+                player1ScoreElement.textContent = player1Score;
+            } else {
+                player2Score += rollResult;
+                player2ScoreElement.textContent = player2Score;
+            }
+
+            if (player1Score > player2Score) {
+                alert("Winner is Player 1");
+            } else if (player2Score > player1Score) {
+                alert("Winner is Player 2");
+            }
+        }
+
+        function resetGame() {
+            const player1ScoreElement = document.getElementById("player1Score");
+            const player2ScoreElement = document.getElementById("player2Score");
+            player1ScoreElement.textContent = 0;
+            player2ScoreElement.textContent = 0;
+        }
+
+        document.getElementById("rollDice").addEventListener("click", rollDice);
+        document.getElementById("reset").addEventListener("click", resetGame);
+    </script>
+</body>
+</html>

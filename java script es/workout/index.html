@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOA bank</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <input type="text" id="user" placeholder="Enter your username" maxlength="15">
+    <input type="button" id="btn1" value="click for username">
+    <p class="output" id="output1"></p>
+    
+
+    <div id="out-div">
+    <div id="inside-div">
+        <p id="balance">YOUR Balance : 0</p>
+        <button onclick="myfunctionDeposit()" type="button" id="deposit-btn">deposit</button>
+        <button onclick="myfunctionWithdraw()" type="button" id="withdraw-btn">withdraw</button>
+        <input id="money-input" type="number">
+        <p id="null"></p>
+    </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
